@@ -6,7 +6,7 @@
 'use strict';
 
 /**
- * Changed: removed node_module dependencies
+ * CHANGED: removed node_module dependencies
  */
 
 // The module to be exported
@@ -81,6 +81,19 @@ var helpers = {
    */
   or: function (a, b, options) {
     if (a || b) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  },
+
+  /**
+   * ifNth
+   * Conditionally render a block if mod(nr, v) is 0
+   */
+  ifNth: function (nr, v, options) {
+    v = v+1;
+    if (v % nr === 0) {
       return options.fn(this);
     } else {
       return options.inverse(this);
@@ -362,7 +375,7 @@ helpers.ifLtEq     = helpers.if_lteq;
 helpers.unlessLtEq = helpers.unless_lteq;
 
 /**
- * Changed: removed node_module dependencies
+ * CHANGED: removed node_module dependencies
  */
 
 for (var helper in helpers) {
