@@ -299,6 +299,31 @@ describe('if_lteq', function() {
   });
 });
 
+describe('orAny', function() {
+  describe('{{#or first second third}}', function() {
+    it('should render a block if one of the values is truthy.', function() {
+      source = '{{#or first second third}}Kiss my perfect metal ass!{{else}}Never mind!({{/or}}';
+      template = Handlebars.compile(source);
+      context = {
+        first: false,
+        second: false,
+	third: true
+      };
+      template(context).should.equal('Kiss my perfect metal ass!');
+    });
+    it('should not render a block if none of the values is truthy.', function() {
+      source = '{{#or first second third}}Never mind!{{else}}Kiss my perfect metal ass!({{/or}}';
+      template = Handlebars.compile(source);
+      context = {
+        first: false,
+        second: false,
+	third: false
+      };
+      template(context).should.equal('Kiss my perfect metal ass!');
+    });
+  });
+});
+
 describe('ifNth', function() {
 
   describe('{{#ifNth "2" @index}}', function() {
