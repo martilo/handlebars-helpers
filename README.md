@@ -71,6 +71,7 @@ We can always use your help documenting helpers. As of Sunday, February 2, 2014,
 * `{{highlight}}`
 * `{{i18n}}`
 * `{{ifAny}}`
+* `{{orAny}}`
 * `{{ifNth}}`
 * `{{if_eq}}`
 * `{{if_lt}}`
@@ -111,6 +112,7 @@ We can always use your help writing tests for helpers. As of Sunday, February 2,
 * `{{globWithContext}}`
 * `{{highlight}}`
 * `{{ifAny}}`
+* `{{orAny}}`
 * `{{inspect}}`
 * `{{iterate}}`
 * `{{joinAny}}`
