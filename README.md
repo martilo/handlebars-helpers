@@ -112,7 +112,6 @@ We can always use your help writing tests for helpers. As of Sunday, February 2,
 * `{{globWithContext}}`
 * `{{highlight}}`
 * `{{ifAny}}`
-* `{{orAny}}`
 * `{{inspect}}`
 * `{{iterate}}`
 * `{{joinAny}}`
